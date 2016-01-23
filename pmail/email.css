@@ -1,0 +1,82 @@
+#inbox {
+
+}
+
+#sent {
+}
+
+#trash{
+
+}
+
+#drafts{
+
+}
+p {
+color: blue;
+text-align: left;
+}
+
+p:hover {
+ color: #A52A2A;
+}
+
+body {
+background-color: #FFEBCD;
+}
+
+.email-type {
+max-width: 300px;
+border: 3px solid black;
+text-align: center;
+}
+
+.paddingrow{
+border: 3px dotted black;
+}
+
+.welcome{
+font-style: italic, bold;
+}
+
+.links{
+float: left;
+}
+
+.emails{
+float: center;
+}
+
+#mail{
+border: 3px solid black;
+}
+
+#inbox, #sent, #drafts, #trash {
+font-size: 20pt;
+}
+
+.account_details {
+float: right;
+width: 200px;
+height: 200px;
+}
+
+.account_button{
+position: fixed;
+top: 5px;
+right:70px;
+ border: 1px solid black;
+}
+
+
+#more_details{
+float: right;
+text-align: center;
+position: relative;
+right: 5px;
+}
+
+.account_button:hover{
+  background-color: grey;
+}
+
