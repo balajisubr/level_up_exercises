@@ -1,9 +1,9 @@
-create schema yadda;
+REATE SEQUENCE yadda.brewer_id_seq;
 
 CREATE SEQUENCE yadda.address_id_seq;
 
 CREATE TABLE yadda.addresses(
-id integer NOT NULL DEFAULT nextval('address_id_seq'),
+id integer NOT NULL DEFAULT nextval('yadda.address_id_seq'),
 created_on timestamp DEFAULT current_timestamp,
 updated_on timestamp DEFAULT current_timestamp,
 created_by varchar(20),
@@ -20,7 +20,7 @@ PRIMARY KEY(id)
 CREATE SEQUENCE yadda.brewer_id_seq;
 
 CREATE TABLE yadda.brewers(
-id integer NOT NULL DEFAULT nextval('brewer_id_seq'),
+id integer NOT NULL DEFAULT nextval('yadda.brewer_id_seq'),
 created_on timestamp DEFAULT current_timestamp,
 updated_on timestamp DEFAULT current_timestamp,
 created_by varchar(20),
@@ -34,7 +34,7 @@ PRIMARY KEY(id)
 
 CREATE SEQUENCE yadda.style_id_seq;
 CREATE TABLE yadda.beer_styles(
-id integer NOT NULL DEFAULT nextval('style_id_seq'),
+id integer NOT NULL DEFAULT nextval('yadda.style_id_seq'),
 style varchar(20) NOT NULL,
 description text,
 PRIMARY KEY(id)
@@ -42,7 +42,7 @@ PRIMARY KEY(id)
 
 CREATE SEQUENCE yadda.beer_id_seq;
 CREATE TABLE yadda.beers(
-id integer NOT NULL DEFAULT nextval('beer_id_seq'),
+id integer NOT NULL DEFAULT nextval('yadda.beer_id_seq'),
 created_on timestamp DEFAULT current_timestamp,
 updated_on timestamp DEFAULT current_timestamp,
 created_by varchar(20),
@@ -56,14 +56,14 @@ PRIMARY KEY(id)
 
 CREATE SEQUENCE yadda.country_id_seq;
 CREATE TABLE yadda.countries(
-  id integer NOT NULL DEFAULT nextval('country_id_seq'),
+  id integer NOT NULL DEFAULT nextval('yadda.country_id_seq'),
   name varchar(40) NOT NULL,
   PRIMARY KEY(id)
 );
 
 CREATE SEQUENCE yadda.user_id_seq;
 CREATE TABLE yadda.users(
-id integer NOT NULL DEFAULT nextval('user_id_seq'),
+id integer NOT NULL DEFAULT nextval('yadda.user_id_seq'),
 created_on timestamp DEFAULT current_timestamp,
 updated_on timestamp DEFAULT current_timestamp,
 created_by varchar(20),
@@ -79,7 +79,7 @@ PRIMARY KEY(id)
 
 CREATE SEQUENCE yadda.rating_id_seq;
 CREATE TABLE yadda.ratings(
-id integer NOT NULL DEFAULT nextval('rating_id_seq'),
+id integer NOT NULL DEFAULT nextval('yadda.rating_id_seq'),
 beer_id integer REFERENCES yadda.beers(id),
 created_on timestamp DEFAULT current_timestamp,
 updated_on timestamp DEFAULT current_timestamp,
