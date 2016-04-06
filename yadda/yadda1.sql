@@ -1,4 +1,4 @@
-REATE SEQUENCE yadda.brewer_id_seq;
+CREATE SEQUENCE yadda.brewer_id_seq;
 
 CREATE SEQUENCE yadda.address_id_seq;
 
