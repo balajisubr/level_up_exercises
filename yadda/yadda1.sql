@@ -1,4 +1,4 @@
-REATE SEQUENCE yadda.brewer_id_seq;
+CREATE SEQUENCE yadda.brewer_id_seq;
 
 CREATE SEQUENCE yadda.address_id_seq;
 
@@ -89,7 +89,8 @@ user_id int REFERENCES yadda.users(id),
 look smallint,
 feel smallint,
 taste smallint,
-smell smallint
+smell smallint,
+rating real
 );
 
 
